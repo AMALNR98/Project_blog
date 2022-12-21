@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
+        {% if title %}
+            <title> Django Blog - {{ title }}</title>
+        {% else %}
+            <title>Django Blog</title>
+        {% endif %}
+        
 
-        </title>
     </head>
     <body>
        {% for post in posts%}
