@@ -2,26 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
 
-posts = [
-    {
-        'author' : 'CoreyMs',
-        'title' : 'Blog post 1',
-        'content':'First post content',
-        'date_posted':'December 21, 2022'
-    },
-    {
-        'author' : 'jane',
-        'title' : 'Blog post 2',
-        'content':'Second post content',
-        'date_posted':'December 21, 2022'
-    },
-    {
-        'author' : 'CoreyM',
-        'title' : 'Blog post 3',
-        'content':'Third post content',
-        'date_posted':'December 21, 2022'
-    },
-]
 
 # Create your views here.
 def home(request):
@@ -39,3 +19,34 @@ def about(request):
 
     #superUser : amalNR
     #pw        : z55ultra
+
+
+
+
+
+
+
+
+
+
+
+    # posts = [
+#     {
+#         'author' : 'CoreyMs',
+#         'title' : 'Blog post 1',
+#         'content':'First post content',
+#         'date_posted':'December 21, 2022'
+#     },
+#     {
+#         'author' : 'jane',
+#         'title' : 'Blog post 2',
+#         'content':'Second post content',
+#         'date_posted':'December 21, 2022'
+#     },
+#     {
+#         'author' : 'CoreyM',
+#         'title' : 'Blog post 3',
+#         'content':'Third post content',
+#         'date_posted':'December 21, 2022'
+#     },
+# ]
