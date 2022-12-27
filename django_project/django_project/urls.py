@@ -18,6 +18,9 @@ from django.contrib.auth import views as auth_view #When we import multiple view
 from django.urls import path, include
 from users import views as user_view
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',user_view.register, name='register'),
@@ -26,3 +29,7 @@ urlpatterns = [
     path('logout/',auth_view.LogoutView.as_view(template_name = 'users/logout.html'), name ='logout'),
     path("blog/", include('blog.urls')),#set path for blog app in /blog/urls.py
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
