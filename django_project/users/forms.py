@@ -19,3 +19,7 @@ class UserUpdateForm(forms.ModelForm):
         fields = ['username', 'email']
 
 
+class ProfileUpdateForm(forms.ModerForm):
+    class Meta:
+        model = Profile
+        field = ['image']
